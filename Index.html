@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        /* ── Global reset & variables ── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #f5f0e8;
+            --ink: #1a1a1a;
+            --accent: #c0392b;
+            --muted: #6b6b6b;
+            --card: #ffffff;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── Header / Nav ── */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.4rem 2.5rem;
+            border-bottom: 2px solid var(--ink);
+            background: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            letter-spacing: 0.02em;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--ink);
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        /* .active class is added by navigation.js */
+        nav a:hover,
+        nav a.active {
+            border-bottom-color: var(--accent);
+            color: var(--accent);
+        }
+
+        #menu-toggle {
+            display: none;
+            background: none;
+            border: 2px solid var(--ink);
+            padding: 0.3rem 0.7rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 5rem 2.5rem;
+            max-width: 860px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.6rem, 6vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--muted);
+            max-width: 540px;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: var(--ink);
+            color: var(--bg);
+            padding: 0.8rem 1.8rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            border-radius: 2px;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 1.2rem;
+            font-size: 0.85rem;
+            color: var(--muted);
+            border-top: 1px solid #ccc;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 600px) {
+            #menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                border-bottom: 2px solid var(--ink);
+                padding: 1rem 2.5rem;
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            nav a {
+                padding: 0.6rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Your Name</div>
+
+        <!-- On mobile, this button shows/hides the nav (handled by navigation.js) -->
+        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <h1>Hi, I'm <span>Your Name</span>.<br>I build things for the web.</h1>
+        <p>
+            A short, punchy bio goes here. Tell visitors who you are,
+            what you do, and what makes you interesting — in 2–3 sentences.
+        </p>
+        <a href="projects.html" class="btn">See My Work →</a>
+    </main>
+
+    <footer>
+        <!-- navigation.js fills in the year automatically -->
+        © <span id="year"></span> Your Name. All rights reserved.
+    </footer>
+
+    <!--
+    This single line links navigation.js to this page.
+    Copy it into every HTML file and the JS will work everywhere.
+  -->
+    <script src="navigation.js"></script>
+
+</body>
+
+</html>
