@@ -2,210 +2,257 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio – Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Caden Lippie's personal portfolio featuring videos, projects, education, experience, and resume.">
+    <title>Caden Lippie | Portfolio</title>
+    <link rel="icon" type="image/png" href="images/CL.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap"
-        rel="stylesheet" />
-    <style>
-        /* ── Global reset & variables ── */
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --bg: #f5f0e8;
-            --ink: #1a1a1a;
-            --accent: #c0392b;
-            --muted: #6b6b6b;
-            --card: #ffffff;
-        }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--bg);
-            color: var(--ink);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* ── Header / Nav ── */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.4rem 2.5rem;
-            border-bottom: 2px solid var(--ink);
-            background: var(--bg);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            letter-spacing: 0.02em;
-        }
-
-        nav {
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--ink);
-            font-weight: 500;
-            font-size: 0.95rem;
-            padding-bottom: 2px;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s;
-        }
-
-        /* .active class is added by navigation.js */
-        nav a:hover,
-        nav a.active {
-            border-bottom-color: var(--accent);
-            color: var(--accent);
-        }
-
-        #menu-toggle {
-            display: none;
-            background: none;
-            border: 2px solid var(--ink);
-            padding: 0.3rem 0.7rem;
-            font-size: 1.2rem;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        /* ── Hero ── */
-        .hero {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 5rem 2.5rem;
-            max-width: 860px;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.6rem, 6vw, 5rem);
-            line-height: 1.1;
-            margin-bottom: 1.2rem;
-        }
-
-        .hero h1 span {
-            color: var(--accent);
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--muted);
-            max-width: 540px;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            text-decoration: none;
-            background: var(--ink);
-            color: var(--bg);
-            padding: 0.8rem 1.8rem;
-            font-weight: 500;
-            letter-spacing: 0.03em;
-            border-radius: 2px;
-            transition: background 0.2s;
-        }
-
-        .btn:hover {
-            background: var(--accent);
-        }
-
-        /* ── Footer ── */
-        footer {
-            text-align: center;
-            padding: 1.2rem;
-            font-size: 0.85rem;
-            color: var(--muted);
-            border-top: 1px solid #ccc;
-        }
-
-        /* ── Mobile ── */
-        @media (max-width: 600px) {
-            #menu-toggle {
-                display: block;
-            }
-
-            nav {
-                display: none;
-                flex-direction: column;
-                gap: 0;
-                position: absolute;
-                top: 68px;
-                left: 0;
-                right: 0;
-                background: var(--bg);
-                border-bottom: 2px solid var(--ink);
-                padding: 1rem 2.5rem;
-            }
-
-            nav.open {
-                display: flex;
-            }
-
-            nav a {
-                padding: 0.6rem 0;
-            }
-        }
-    </style>
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-
     <header>
-        <div class="logo">Your Name</div>
-
-        <!-- On mobile, this button shows/hides the nav (handled by navigation.js) -->
-        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        <div class="logo"><a href="#"><strong>Caden Lippie</strong></a></div>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="#overview">Overview</a>
+            <a href="#projects">Project Descriptions</a>
+            <a href="#video">Video Presentation</a>
+            <a href="#blog">Blog Post</a>
         </nav>
     </header>
 
-    <main class="hero">
-        <h1>Hi, I'm <span>Your Name</span>.<br>I build things for the web.</h1>
-        <p>
-            A short, punchy bio goes here. Tell visitors who you are,
-            what you do, and what makes you interesting — in 2–3 sentences.
-        </p>
-        <a href="projects.html" class="btn">See My Work →</a>
+    <main>
+        <div class="welcome">
+            <h1><span>H</span><span>i</span><span> I</span><span>'</span><span>m </span> <span id="name">
+                    <span>C</span><span>a</span><span>d</span><span>e</span><span>n
+                    </span><span>L</span><span>i</span><span>p</span><span>p</span><span>i</span><span>e</span></span><span>.</span><br>
+                <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e
+                </span><span>t</span><span>o </span><span>m</span><span>y
+                </span><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span><span>!</span>
+            </h1>
+        </div>
+
+        <div class="titles" id="overview">
+            <h2>Overview</h2>
+            <div class="line"></div>
+        </div>
+
+
+
+        <div class="overview">
+            <p>Masters in Applied Data Science learning outcomes:</p>
+            <ol>
+                <li>Collect, store, and access data by identifying and leveraging applicable technologies</li>
+                <li>Create actionable insight across a range of contexts (e.g. societal, business, political), using data and the
+                    full data science life cycle</li>
+                <li>Apply visualization and predictive models to help generate actionable insight</li>
+                <li>Use programming languages such as R and Python to support the generation of actionable insight</li>
+                <li>Communicate insights gained via visualization and analytics to a broad range of audiences (including
+                    project sponsors and technical team leads)</li>
+                <li>Apply ethics in the development, use and evaluation of data and predictive models (e.g., fairness,
+                    bias, transparency, privacy)</li>
+            </ol>
+            <p style="text-indent: 40px;">The projects included in this portfolio are my final project, IST 686, where
+                I used health metrics to predict maximum heart rate.
+                I have also included my final project for IST 691 Deep Learning in Practice
+                where we used images of people's faces to make song suggestions based on their mood.
+                In addition, my final project for IST 652 Scripting for Data Analysis used seasonal statistics
+                from NBA players to find trends over a 20-year time span.
+            </p>
+            <p style="text-indent: 40px;">
+                These projects helped me achieve the program learning outcomes. The NBA seasonal analysis project applied
+                learning outcomes 1, 4, and 5.
+                In order to complete this project, we needed to access and collect data in the most efficient way, which in this case
+                was through an API.
+                We also used Python throughout the entire process, from data retrieval to modeling and visualization.
+                Then we communicated these insights to a range of audiences, including a full class presentation, individually to
+                our professor, and to small groups at the iSchool poster day. The emotion-based music recommendation system project
+                applied learning outcomes
+                3, 4, and 6. We used Python to create and apply predictive models to form our recommendation system. We also had to
+                consider the ethics involved with the development
+                of this model. Since we are using images of people's faces, we had to make sure that the images were not copyrighted and
+                that we had the authority to use them. That meant finding specific
+                datasets that already had the requisite copyright licenses. Another ethical question we had to think about was the
+                unbalanced data affecting the model. There were more images in the data labeled
+                as happy and sad as emotions like disgust or fear. This led to a biased model that did not fairly classify all emotions.
+                The maximum heart rate prediction project incorporated learning outcomes 3 and 4.
+                For this project, I used R to build predictive models that I used to gain insights about the data and its features. All
+                of these projects together demonstrate learning outcome 2.
+                I was able to create actionable insights across a range of contexts, including health, music, and sports, using
+                different sources of data and the full data science life cycle.
+        </div>
+
+
+
+        <div class="titles" id="projects">
+            <h2>Projects</h2>
+            <div class="line"></div>
+        </div>
+
+
+
+        <div class="videos">
+
+            <div class="video-box">
+                <div class="video-box-content">
+                    <div class="class-row">
+                        <div>
+                            <div class="class">IST 652 Scripting for Data Analysis</div>
+                        </div>
+
+                        <div class="class">2025</div>
+                    </div>
+
+                    <img src="images\IST 652 Final Project Poster.png" alt="NBA_Poster" class="video-wrapper">
+                    <h3>NBA Seasonal Trend Analysis and Exploration</h3>
+                    <p>I worked in a group to look at NBA seasonal trends. For this project, we loaded data from the NBA website, which
+                    culminated in around 14,000 unique player seasons. We sought to find trends in NBA three-point attempts by play style
+                    over time, statistical peaks by player age, and three-point attempts over time. To accomplish these tasks, we used
+                    descriptive statistics, visualizations, and unsupervised learning techniques. For the unsupervised learning, we used
+                    k-means clustering to cluster the data into three groups, which were then labeled as star players, big men, and role
+                    players. Then we plotted the change in three-pointers over a 20-year period. The results were quite interesting, with
+                    star players seeing the highest increase in three-point attempts over the period. Role players had a more gradual
+                    increase, with big men seeing a very minimal increase. One thing to note about this grouping was that star big men were
+                    clustered as star players, with the star big men actually seeing an increase in attempts. Another piece of the analysis
+                    was the statistical peaks by age. In this section we looked at which ages were better for certain statistics. One of
+                    the takeaways from this section was that playmaking is a skill where players will peak later on in their careers. This
+                    makes sense since playmaking requires a certain amount of basketball intelligence, which can be learned over time.
+                    Scoring, on the other hand, is a skill set that tends to be more suited for younger players who may be more athletic. We also saw that over
+                    the 20-year period, three-point attempts increased significantly. Meanwhile, the average amount of field goal attempts
+                    did not increase by very much.
+                    </p>
+                    <div class="skills-row">
+                        <div>
+                            <div class="skills">Learning Outcome: 1, 2, 4, 5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-box">
+                <div class="video-box-content">
+                    <div class="class-row">
+                        <div>
+                            <div class="class">IST 686 Quantitative Reasoning for Data Science</div>
+                        </div>
+            
+                        <div class="class">2025</div>
+                    </div>
+                    
+                    <img src="images\Quant.png" alt="Heart_Poster" class="video-wrapper">
+                    <h3>Assessing the Predictability of Maximum Heart Rate Using Demographic and Cardiovascular Metrics</h3>
+                    <p>For this project, I was challenged to use a research paper-based approach that incorporated both Frequentist and
+                    Bayesian statistical methods to uncover insights in data. The research question I chose was to determine if maximum
+                    heart rate could be accurately predicted using other available health data. The data I chose had around 1,000 rows with
+                    features that included demographic metrics like age and gender, as well as cardiovascular metrics like resting blood
+                    pressure and levels of serum cholesterol.
+                    I then used a Frequentist linear regression model that had maximum heart rate as the dependent variable and age, gender,
+                    exercise-induced angina, ST depression, slope of ST during exercise, number of major vessels colored by fluoroscopy, and
+                    thalassemia test result. Together, these variables resulted in a model R² of 0.345, meaning that 34.5% of the variance
+                    in heart rate can be explained by the model. The Bayesian model kept the same variable and had a Bayes factor of 3.8 x
+                    10⁸⁵, which provides strong evidence that the independent variables improve the prediction of maximum heart rate
+                    compared to a model with no predictors. Both of these methods show that maximum heart rate is correlated to health and
+                    demographic variables, and it is possible to build an accurate model if given the right predictors. This would make
+                    getting maximum heart rate values much easier for the patient since they wouldn’t have to do intense exercise to get
+                    their heart rate up. This project allowed me to apply my knowledge of different modeling methods to real health problems
+                    with the guidance of my professor.
+
+                    </p>
+                    <div class="skills-row">
+                        <div>
+                            <div class="skills">Learning Outcome: 2, 3, 4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-box">
+                <div class="video-box-content">
+                    <div class="class-row">
+                        <div>
+                            <div class="class">IST 691 Deep Learning in Practice</div>
+                        </div>
+            
+                        <div class="class">2025</div>
+                    </div>
+                    
+                    <img src="images\Emotion to Music Recommendation.png" alt="Music_Poster" class="video-wrapper">
+                    <h3>Emotion-Driven Music Recommendation Using Real-Time Facial Expression Recognition</h3>
+                    <p>For this group project, we created a system that recommended songs based on the users' emotions using facial data. To
+                    complete this project, we got lots of labeled facial data based on emotions like happy, sad, and disgust. Then we
+                    trained our own convolutional neural network to classify new images into emotion categories. Then we assigned each
+                    emotion a valence score, which measures emotional stimulus. This was then applied to a dataset that had numerous songs
+                    with valence scores. The system would then match the valence score of the classified emotion with the accompanying song.
+                    You could use this system either live with a webcam or by uploading a photo. This project taught me a lot about how to
+                    build my own convolutional neural network using TensorFlow and Keras in Python. We then presented this project at the
+                    iSchool poster day.
+                    </p>
+                    <div class="skills-row">
+                        <div>
+                            <div class="skills">Learning Outcome: 2, 3, 4, 6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="titles" id="video">
+            <h2>Recorded Video Presentation</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="about">
+            <video controls class="reflection">
+                <source src="images\ADS_Program_Video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="titles" id="blog">
+            <h2>Blog Post</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="resume-section">
+            <p></p>
+           <iframe src="images/Blog Post.pdf" width="100%" height="600px"></iframe>
+
+        </div>
     </main>
 
     <footer>
-        <!-- navigation.js fills in the year automatically -->
-        © <span id="year"></span> Your Name. All rights reserved.
+        <div>
+            © <span id="year"></span> Caden Lippie. All rights reserved.
+        </div>
+
+        <div>
+            <a href="https://www.linkedin.com/in/caden-lippie-a2384024a" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>LinkedIn</title>
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+            </a>
+
+            <a href="https://github.com/clippie" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>GitHub</title>
+                    <path
+                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+            </a>
+        </div>
+
     </footer>
 
-    <!--
-    This single line links navigation.js to this page.
-    Copy it into every HTML file and the JS will work everywhere.
-  -->
-    <script src="navigation.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 
